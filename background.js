@@ -5,8 +5,8 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "fetchData") {
     console.log("Sending POST data:", request.data);
-    fetch('http://localhost:8001/api/hi', {
-      method: 'GET',
+    fetch('http://localhost:8001/api/postData', {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
